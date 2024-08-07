@@ -363,3 +363,7 @@ class Person {
         return `${this.firstName} ${this.lastName}`;
     }
 }
+
+
+https://www.youtube.com/watch?v=hdI2bqOjy3c&t=1s
+Continue on 1:12:19 min
