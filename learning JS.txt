@@ -1,0 +1,365 @@
+What is JS?
+Can use for Front and Back
+Back - Node.JS
+Front - Vanila / React
+
+Client Side -> SlideShow / Interactive Frames
+
+How to use JS on HTML file? Right it below the HTML code or Seperate File
+
+Moreover - we can run JS from Chrome using the developer tool.
+Go to console and than run what ever you want
+
+The place for decumantion is MDN for JS and Console.
+
+Console.log() - using for debugging
+cl -> visual studio shortcuts
+
+var -> global and confilct (do using even)
+let -> reassing / change the value (for example - score)  
+const -> can't be change the value (for example - name)
+
+Always use const unless we need to change the value
+
+Data Types:
+String, Numbers, boolean, null, undefined, symbol
+null = empty
+undefined - let / y=undefined
+
+String: 
+const name = 'Amitl;
+const age = 30;
+const rating = 4.5;
+const isCool = true;
+const x = null
+const y = undefined
+let z;
+
+console.log(typeof _____);
+typeof -> getting info to show on client
+
+Concatenation:
+Using variable directly on the string:
+
+
+//Concatenation
+console.log('My name is '+name + ' and I am '+ age);
+// Template String
+console.log(`My name is ${name} and I am ${age}`);
+
+Be carefull that the template string using backticks `` and not strighticks ''
+
+String option:
+substring
+toUpperCase
+Split
+length
+split('') = Array
+
+const s = 'tech, innovation, aggriculture, Dog';
+console.log(s.split(', '));
+Split helps you getting array from string
+0: "tech"
+1: "innovation"
+2: "aggriculture"
+3: "Dog"
+length: 4
+
+Array!
+Type of array: you can use any value that you want to store on the array everythings so it is free custom field
+
+const numbers = new Array(1,2,3,4,5);
+const fruits = ['apples', 'oranges', 'pears'];
+
+the best way to store array ['', '', ''];
+
+how to get arrays info?
+fruits[2] and we get the location 3
+
+
+Arrays func:
+push = add value
+unshift = add value for beginning
+pop = remove the last
+fruits.indexOf('Orange') = Searching Orange and location
+Array.isArray = Check if something is an array
+
+Objacts!
+const person = {
+    firstName: 'Amit',
+    lastName: 'Perez',
+    age: 26,
+    hobbies: ['surfing', 'developing', 'cycling'],
+    address: {
+        street: 'David Remez',
+        houseNum: 2,
+        city: 'Petah Tikva',
+        state: 'Israel'
+    }
+}
+
+console.log(person.firstName, person.lastName);
+
+We can export value from objact!
+const {firstName, lastName} = person;
+console.log(firstName);
+
+in this section we get the value firstName as a value and not only on the array
+
+I can add objects!
+person.email = 'amit@amitperez.com';
+
+
+
+
+Objects are very similar to a json.
+
+This is objects:
+const todos = [{
+    id: 1,
+    text: 'Take out trash',
+    isCompleted: true
+},
+{
+    id: 2,
+    text: 'Meeting with boss',
+    isCompleted: true
+},
+{
+    id: 3,
+    text: 'Dentist Appt',
+    isCompleted: false
+}];
+
+This is JSON:
+[
+   {
+      "id": 1,
+      "text": "Take out trash",
+      "isCompleted": true
+   },
+   {
+      "id": 2,
+      "text": "Meeting with boss",
+      "isCompleted": true
+   },
+   {
+      "id": 3,
+      "text": "Dentist Appt",
+      "isCompleted": false
+   }
+]
+
+Super similar the different are the quotes: ""
+
+
+Convert Object to a JSON: 
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
+
+Lets gooo!!
+//for loop
+for(let i =0; i<10; i++){
+    console.log(`For loop Numbe: ${i}`);
+}
+//Another option for for! Espacially if we are working on Objects
+for (let todo of todos) {
+    console.log(todo.text);
+}
+
+//while
+let i=0;
+while(i<10){
+    console.log(`While looping ${i}`);
+    i++
+}
+
+
+High Order Array Methods
+forEach
+Use for loop when you need more control over the iteration (e.g., to use break or continue).
+Use forEach when you want cleaner and more readable code for array iterations and don't need to exit the loop early.
+
+todos.forEach(function(todo) {
+    console.log(todo.text); 
+});
+
+Map - Creating another array from array
+const todoText = todos.map(function(todo){
+    return todo.text;
+});
+
+console.log(todoText);
+
+
+Filter!
+Create another array from the array with conditions
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+});
+
+console.log(todoCompleted);
+
+
+If!!!
+const x = 10;
+if (x == 10) {
+    console.log('x is 10');
+    
+}
+
+Triple ===
+Double ==
+Tripole - value + type of value
+Double - Value
+
+
+if (x > 5 || y > 10) {
+Or symbol ||
+
+if (x > 5 && y > 10) {
+And Symbol &&
+
+Ternary Operator for value that cannot dyfing only if something happend.
+const x = 10;
+const color = x > 10 ? 'red' : 'blue';
+
+console.log(color
+
+so symbol ? is if the left condition is true
+syble : is the else (left condition is not true)
+
+So in this example x = 10 so it is Blue
+
+
+Switch!
+Using for detarmine if value are sothing and do funcv
+
+const x = 5;
+const color = 'x > 10 ? 'red' : 'blue'';
+switch(color){
+    case 'red':console.log('color is red');
+    break;
+    case 'blue':console.log('color is blue');
+    break;
+    default:
+    console.log('color not red or blue');
+    break;
+}
+
+
+in this case if the value is x>10 it will search color and do something if the case is right / wrong.
+
+
+
+Creating Func!
+function addNums(num1, num2) {
+    console.log(num1 + num2);
+}
+
+Use the func! 
+addNums();
+
+
+we can do a defualt value
+function addNums(num1 = 4, num2 = 10) {
+    console.log(num1 + num2);
+}
+
+addNums();
+it will do 4 + 10.
+
+
+Another option: Arrow func
+const addNums = (num1 = 5, num2 = 10) => console.log(num1 + num2);
+It is only work if we don't do a lot of func.
+
+Super lean option: 
+todos.forEach(element => console.log(todo);
+
+
+
+Object Orient Programing
+// Construction Function
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+}
+
+//Instantiate Object
+const person1 = new Person('Amit', 'Perez', '3-3-1998');
+
+console.log(person1);
+
+
+Date object: 
+this.dob = new Date(dob);
+
+
+We can create a function inside the object
+// Construction Function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function(){
+        return this.dob.getFullYear();
+    }
+}
+
+//Instantiate Object
+const person1 = new Person('Amit', 'Perez', '3-3-1998');
+
+console.log(person1.getBirthYear());
+
+
+func for getting full name:
+    this.getFullName = function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+
+Prototype!
+If we don't want that the func will work everytime that we are using the constructor of the object we can use prototype func
+
+// Construction Function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+
+Person.prototype.getBirthYear = function(){
+    return this.dob.getFullYear(); 
+}
+Person.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}
+
+//Instantiate Object
+const person1 = new Person('Amit', 'Perez', '3-3-1998');
+
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());
+
+
+
+Class!
+JS ES6 using also class like all the other langugues.
+So it is the same like creating a function and prototype but in diffrent typo that will helps the readers.
+
+//Class
+class Person {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);  
+    }
+    getBirthYear(){
+        return this.dob.getFullYear();
+    }
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
