@@ -367,3 +367,59 @@ class Person {
 
 https://www.youtube.com/watch?v=hdI2bqOjy3c&t=1s
 Continue on 1:12:19 min
+
+!!!
+
+Window object is the top level on JS.
+alot of informaion about the window and browser.
+
+//Single selector
+document selector.
+document.getElementById('my-form'); 
+document.querySelector('h1')
+
+querySelector = Search and filte type of elements.
+
+//Multi Selector
+document.querySelectorAll
+querySelectorAll = Search and filter more than one type of elements.
+document.querySelectorAll('.items')
+Searching the items = class. We can search tag, id or class.
+
+object
+.remove();
+.lastElementChild.remove();
+.textcontent = change text;
+.firstElementChild.textcontent = 'Hello!';  
+msg.innerHTML = ''; Changing Text
+msg.classList.add('error'); = Adding Style Class
+.addEventListener
+.createElement = to create new elements on the code.
+
+
+.addEventListener
+Click -> For clicking items
+ mouseover = hover
+ mouseout = hover out
+
+I can change everything with JS
+Colors, Text, classes and so on.
+
+
+Lets go and introduce for addEventListener
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', (e) => {
+e.preventDefault();
+console.log('Click');
+});
+
+Btn -> Configure as a value for the class bnt.
+btn -> get the event listener to listen for every func that occure
+e = arrow func 
+e.preventDefault = submit in Forms are getting click for milisecond and we want it to run once.
+
+setTimeout(() => msg.remove(), 2000);
+Putting a time for a func. If for example I want to show an error message for a couple of sec and than to hide it.
+This is a tentative modification that I can do in me code to show more things.
+
